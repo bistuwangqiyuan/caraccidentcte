@@ -60,3 +60,27 @@ python scripts/verify_bp_math.py
 ## 第一名机会
 
 以 `outputs/scoring.json` 的 `winner` 字段为准（由评分涌现，非标题预设）。当前硬约束下胜出的是**新加坡事故后证据包与保险 FNOL 清单**。
+
+## Web 产品（AfterCrash SG）
+
+已实现并部署在 Vercel：
+
+- **生产站：** https://aftercrash-sg.vercel.app  
+- **源码：** [`web/`](web/)（Next.js App Router）  
+- **说明：** [`web/README.md`](web/README.md)
+
+```bash
+cd web
+cp .env.example .env.local   # 填入 Stripe Test Key + UNLOCK_SECRET
+npm install
+npm run dev
+```
+
+上线（项目目录为 `web/`）：
+
+```bash
+cd web
+npx vercel --prod
+```
+
+验收标准：落地页 → `/pack` 向导 → Stripe Checkout（Test）→ `/success` 下载含免责声明的 PDF；全文不做过错认定/法律意见/CTE 诊断。未配置 Stripe 时站点仍可免费预览清单，支付按钮返回明确配置错误。

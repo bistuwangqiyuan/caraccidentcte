@@ -6,3 +6,8 @@ venv/
 .cursor/
 outputs/mc_raw.npz
 *.egg-info/
+web/node_modules/
+web/.next/
+web/.vercel/
+web/.env*.local
+web/.vercel-unlock.tmp
