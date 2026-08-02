@@ -1,0 +1,55 @@
+meta:
+  as_of: "2026-08-02"
+  product_codename: "AfterCrash SG Evidence Pack"
+  winner_id_expected: "evidence-fnol-sg"
+  note: "胜出以 score_opportunities.py 输出为准；本文件提供 BP 叙述模板与里程碑。"
+
+positioning:
+  headline: "新加坡事故后证据包与保险 FNOL 清单"
+  promise: "帮你在事故后把该拍的、该留的、该交给保险公司的材料一次整理好。"
+  not_promise:
+    - "不提供法律意见"
+    - "不输出过错比例或胜诉预测"
+    - "不代理索赔、不代为和解"
+    - "不诊断 CTE 或其他疾病"
+    - "不代表 SPF / LTA / 律师公会"
+
+zero_human_stack:
+  acquisition: "SEO/内容清单页 + 站内转化；默认关闭付费广告"
+  conversion: "定价页 + 示例 PDF + Stripe Checkout"
+  delivery: "引导式表单 → PDF/ZIP 生成 → 邮件送达"
+  support: "AI FAQ + 工单自动回复模板；升级路径指向律师名录外链"
+  billing: "Stripe 一次性 / 可选年订"
+  risk: "速率限制、重复支付检测、恶意上传扫描、PDPA 最小化存储"
+
+milestones_90d:
+  - day: 14
+    name: "Phase 0 合规文案与原型"
+    hours: 20
+    exit_criteria:
+      - "完成不能做清单与落地页免责声明"
+      - "可点击原型覆盖完整用户路径"
+      - "律师朋友或公开资料交叉检查文案（非正式意见）"
+  - day: 45
+    name: "Phase 1 可收费 MVP"
+    hours: 60
+    exit_criteria:
+      - "Stripe 真实收款成功 ≥1 笔（可用自测）"
+      - "PDF/ZIP 自动交付成功率 ≥95%（自测样本）"
+      - "隐私政策与数据删除流程上线"
+  - day: 90
+    name: "Phase 2 验证"
+    hours: 60
+    exit_criteria:
+      - "付费订单 ≥15 或明确失败（放弃）"
+      - "记录真实 visitor→paid 与每单维护分钟数"
+      - "决定：继续 / 改价 / 停损"
+
+kill_criteria:
+  - "连续 6 个月零收入且无明确漏斗改进信号"
+  - "出现监管或律师公会明确风险警告且无法靠窄化功能消除"
+  - "实测维护工时使 20h/周无法同时做增长"
+
+goodwill:
+  value_first: "先帮用户把材料整理清楚，减少慌乱与遗漏；再谈收费。"
+  honesty: "不确定的转化与 CAC 标明待测量；不承诺赔付结果。"

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="478.473594pt" height="242.495922pt" viewBox="0 0 478.473594 242.495922" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-02T16:24:19.293778</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 242.495922 
+L 478.473594 242.495922 
+L 478.473594 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 39.048672 209.8485 
+L 440.808672 209.8485 
+L 440.808672 21.3525 
+L 39.048672 21.3525 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 57.31049 209.8485 
+L 57.31049 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="57.31049" y="220.542875" transform="rotate(-0 57.31049 220.542875)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 102.965036 209.8485 
+L 102.965036 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="102.965036" y="220.542875" transform="rotate(-0 102.965036 220.542875)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 148.619581 209.8485 
+L 148.619581 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="148.619581" y="220.542875" transform="rotate(-0 148.619581 220.542875)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 194.274126 209.8485 
+L 194.274126 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="194.274126" y="220.542875" transform="rotate(-0 194.274126 220.542875)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 239.928672 209.8485 
+L 239.928672 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="239.928672" y="220.542875" transform="rotate(-0 239.928672 220.542875)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 285.583217 209.8485 
+L 285.583217 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="285.583217" y="220.542875" transform="rotate(-0 285.583217 220.542875)">50</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 331.237763 209.8485 
+L 331.237763 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="331.237763" y="220.542875" transform="rotate(-0 331.237763 220.542875)">60</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 376.892308 209.8485 
+L 376.892308 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="376.892308" y="220.542875" transform="rotate(-0 376.892308 220.542875)">70</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_17">
+      <path d="M 422.546854 209.8485 
+L 422.546854 21.3525 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="422.546854" y="220.542875" transform="rotate(-0 422.546854 220.542875)">80</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 9.5px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6e6e73" x="239.928672" y="234.374281" transform="rotate(-0 239.928672 234.374281)">影子时薪（USD/小时）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_19">
+      <path d="M 39.048672 201.2805 
+L 440.808672 201.2805 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="204.877687" transform="rotate(-0 35.548672 204.877687)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_21">
+      <path d="M 39.048672 167.0085 
+L 440.808672 167.0085 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="170.605687" transform="rotate(-0 35.548672 170.605687)">20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_23">
+      <path d="M 39.048672 132.7365 
+L 440.808672 132.7365 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_13">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="136.333687" transform="rotate(-0 35.548672 136.333687)">40</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_25">
+      <path d="M 39.048672 98.4645 
+L 440.808672 98.4645 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_14">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="102.061687" transform="rotate(-0 35.548672 102.061687)">60</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_27">
+      <path d="M 39.048672 64.1925 
+L 440.808672 64.1925 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_28"/>
+     <g id="text_15">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="67.789687" transform="rotate(-0 35.548672 67.789687)">80</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_29">
+      <path d="M 39.048672 29.9205 
+L 440.808672 29.9205 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_30"/>
+     <g id="text_16">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #6e6e73" x="35.548672" y="33.517687" transform="rotate(-0 35.548672 33.517687)">100</text>
+     </g>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 9.5px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #0071e3" x="13.354063" y="115.6005" transform="rotate(-90 13.354063 115.6005)">胜率（%）</text>
+    </g>
+   </g>
+   <g id="line2d_31">
+    <path d="M 57.31049 29.9205 
+L 80.137763 40.017888 
+L 102.965036 90.693324 
+L 125.792308 141.244524 
+L 148.619581 172.34208 
+L 171.446854 188.676972 
+L 194.274126 196.09686 
+L 239.928672 200.736432 
+L 285.583217 201.246228 
+L 422.546854 201.2805 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #0071e3; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 39.048672 209.8485 
+L 39.048672 21.3525 
+" style="fill: none; stroke: #e5e5ea; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 39.048672 209.8485 
+L 440.808672 209.8485 
+" style="fill: none; stroke: #e5e5ea; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 12px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1d1d1f" x="239.928672" y="15.3525" transform="rotate(-0 239.928672 15.3525)">影子时薪敏感性</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="matplotlib.axis_3">
+    <g id="ytick_7">
+     <g id="line2d_32">
+      <path d="M 39.048672 189.110455 
+L 440.808672 189.110455 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_33"/>
+     <g id="text_19">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="192.707643" transform="rotate(-0 444.308672 192.707643)">-20</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_34">
+      <path d="M 39.048672 160.625978 
+L 440.808672 160.625978 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_35"/>
+     <g id="text_20">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="164.223166" transform="rotate(-0 444.308672 164.223166)">0</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_36">
+      <path d="M 39.048672 132.141501 
+L 440.808672 132.141501 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_37"/>
+     <g id="text_21">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="135.738688" transform="rotate(-0 444.308672 135.738688)">20</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_38">
+      <path d="M 39.048672 103.657023 
+L 440.808672 103.657023 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_39"/>
+     <g id="text_22">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="107.254211" transform="rotate(-0 444.308672 107.254211)">40</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_40">
+      <path d="M 39.048672 75.172546 
+L 440.808672 75.172546 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_41"/>
+     <g id="text_23">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="78.769734" transform="rotate(-0 444.308672 78.769734)">60</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_42">
+      <path d="M 39.048672 46.688069 
+L 440.808672 46.688069 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #e5e5ea; stroke-opacity: 0.9; stroke-width: 0.6; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_43"/>
+     <g id="text_24">
+      <text style="font-size: 9px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6e6e73" x="444.308672" y="50.285256" transform="rotate(-0 444.308672 50.285256)">80</text>
+     </g>
+    </g>
+    <g id="text_25">
+     <text style="font-size: 9.5px; font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ff9f0a" x="470.351953" y="115.6005" transform="rotate(-90 470.351953 115.6005)">风险调整年化（%）</text>
+    </g>
+   </g>
+   <g id="line2d_44">
+    <path d="M 57.31049 29.9205 
+L 80.137763 129.448931 
+L 102.965036 150.302891 
+L 125.792308 161.681206 
+L 148.619581 169.336124 
+L 171.446854 175.028003 
+L 194.274126 179.518794 
+L 239.928672 186.314974 
+L 285.583217 191.346303 
+L 422.546854 201.2805 
+" clip-path="url(#pb8dcefe70e)" style="fill: none; stroke: #ff9f0a; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 39.048672 209.8485 
+L 39.048672 21.3525 
+" style="fill: none; stroke: #e5e5ea; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 39.048672 209.8485 
+L 440.808672 209.8485 
+" style="fill: none; stroke: #e5e5ea; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb8dcefe70e">
+   <rect x="39.048672" y="21.3525" width="401.76" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>

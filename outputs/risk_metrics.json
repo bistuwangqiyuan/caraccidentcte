@@ -1,0 +1,633 @@
+{
+  "_meta": {
+    "artifact": "risk_metrics",
+    "generated_by": "scripts/run_all.py",
+    "as_of": "2026-08-02",
+    "generated_on": "2026-08-02",
+    "seed": 20260802
+  },
+  "years": 5.0,
+  "primary": {
+    "shadow_hourly_usd": 25.0,
+    "mean_stake_usd": 88402.55,
+    "win_rate": 0.07355,
+    "avg_win_usd": 22762.44327095011,
+    "avg_loss_usd": 41233.15551067332,
+    "payoff_ratio": 0.5520422337082105,
+    "aggregate_moic": 0.5868187148415411,
+    "mean_per_run_moic": 0.5719880864469565,
+    "median_moic": 0.5219816257818192,
+    "moic_p05": 0.2383184421763033,
+    "moic_p95": 1.0841285781726577,
+    "mean_moic_if_win": 1.2013333345305717,
+    "mean_moic_if_loss": 0.5220249551430006,
+    "ev_loss_to_zero": 0.08835806675472355,
+    "ev_loss_to_breakeven": 1.0148080667547235,
+    "risk_adj_annualised_probweighted": -0.10112191728039843,
+    "risk_adj_annualised_ev_zero": -0.38446997678693895,
+    "risk_adj_annualised_ev_breakeven": 0.0029442253066316315,
+    "kelly_fraction_numeric": 0.0,
+    "kelly_growth_rate_log": 0.0,
+    "kelly_annualised_growth": 0.0,
+    "kelly_fraction_binary": -1.604673047857762,
+    "fractional_kelly_half": 0.0,
+    "fractional_kelly_quarter": 0.0,
+    "expected_return_usd": 51876.27077971509,
+    "p_total_loss": 0.0
+  },
+  "shadow_low": {
+    "shadow_hourly_usd": 10.0,
+    "mean_stake_usd": 36561.02,
+    "win_rate": 0.64535,
+    "avg_win_usd": 28219.2009796889,
+    "avg_loss_usd": 8165.827076066951,
+    "payoff_ratio": 3.455767642006032,
+    "aggregate_moic": 1.4188956101256225,
+    "mean_per_run_moic": 1.3460143534097608,
+    "median_moic": 1.2012473216324582,
+    "moic_p05": 0.5684471404756961,
+    "moic_p95": 2.6124206650415984,
+    "mean_moic_if_win": 1.6695904768414083,
+    "mean_moic_if_loss": 0.7572089078814556,
+    "ev_loss_to_zero": 1.0774702142296029,
+    "ev_loss_to_breakeven": 1.4321202142296028,
+    "risk_adj_annualised_probweighted": 0.07248219033485714,
+    "risk_adj_annualised_ev_zero": 0.015035086464340264,
+    "risk_adj_annualised_ev_breakeven": 0.07447396045212518,
+    "kelly_fraction_numeric": 0.999,
+    "kelly_growth_rate_log": 0.18902670545058808,
+    "kelly_annualised_growth": 0.2080732141916466,
+    "kelly_fraction_binary": 0.5427244658960548,
+    "fractional_kelly_half": 0.4995,
+    "fractional_kelly_quarter": 0.24975,
+    "expected_return_usd": 51876.27077971509,
+    "p_total_loss": 0.0
+  },
+  "shadow_high": {
+    "shadow_hourly_usd": 50.0,
+    "mean_stake_usd": 174805.1,
+    "win_rate": 0.0002,
+    "avg_win_usd": 5550.686192566409,
+    "avg_loss_usd": 122954.53026357616,
+    "payoff_ratio": 0.04514421860396253,
+    "aggregate_moic": 0.2967663459459426,
+    "mean_per_run_moic": 0.2934122746563312,
+    "median_moic": 0.26887152257382163,
+    "moic_p05": 0.1207561766786599,
+    "moic_p95": 0.5502003831245781,
+    "mean_moic_if_win": 1.0211858251624673,
+    "mean_moic_if_loss": 0.29326669082946455,
+    "ev_loss_to_zero": 0.00020423716503249347,
+    "ev_loss_to_breakeven": 1.0000042371650326,
+    "risk_adj_annualised_probweighted": -0.21569870903649913,
+    "risk_adj_annualised_ev_zero": -0.8171786318400032,
+    "risk_adj_annualised_ev_breakeven": 8.474315702500235e-07,
+    "kelly_fraction_numeric": 0.0,
+    "kelly_growth_rate_log": 0.0,
+    "kelly_annualised_growth": 0.0,
+    "kelly_fraction_binary": -22.146600430215944,
+    "fractional_kelly_half": 0.0,
+    "fractional_kelly_quarter": 0.0,
+    "expected_return_usd": 51876.27077971509,
+    "p_total_loss": 0.0
+  },
+  "breakeven_shadow_hourly_usd": 14.431365387860396,
+  "shadow_sweep": [
+    {
+      "shadow_hourly_usd": 0.0,
+      "win_rate": 1.0,
+      "aggregate_moic": 25.938135389857543,
+      "payoff_ratio": null,
+      "kelly_fraction": 0.999,
+      "risk_adjusted_annualised": 0.9177312734018692
+    },
+    {
+      "shadow_hourly_usd": 5.0,
+      "win_rate": 0.941075,
+      "aggregate_moic": 2.6906067723164524,
+      "payoff_ratio": 16.221955280560746,
+      "kelly_fraction": 0.999,
+      "risk_adjusted_annualised": 0.21890552667485141
+    },
+    {
+      "shadow_hourly_usd": 10.0,
+      "win_rate": 0.64535,
+      "aggregate_moic": 1.4188956101256225,
+      "payoff_ratio": 3.455767642006032,
+      "kelly_fraction": 0.999,
+      "risk_adjusted_annualised": 0.07248219033485714
+    },
+    {
+      "shadow_hourly_usd": 15.0,
+      "win_rate": 0.35035,
+      "aggregate_moic": 0.9634991943898156,
+      "payoff_ratio": 1.5215901385935218,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.007409141429292387
+    },
+    {
+      "shadow_hourly_usd": 20.0,
+      "win_rate": 0.168875,
+      "aggregate_moic": 0.7293979584909978,
+      "payoff_ratio": 0.8554030491036071,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.06115713800867262
+    },
+    {
+      "shadow_hourly_usd": 25.0,
+      "win_rate": 0.07355,
+      "aggregate_moic": 0.5868187148415411,
+      "payoff_ratio": 0.5520422337082105,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.10112191728039843
+    },
+    {
+      "shadow_hourly_usd": 30.0,
+      "win_rate": 0.03025,
+      "aggregate_moic": 0.4908664716910646,
+      "payoff_ratio": 0.365883761550913,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.1326534131974978
+    },
+    {
+      "shadow_hourly_usd": 40.0,
+      "win_rate": 0.003175,
+      "aggregate_moic": 0.36989989723427247,
+      "payoff_ratio": 0.21079395331397402,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.18037189459437564
+    },
+    {
+      "shadow_hourly_usd": 50.0,
+      "win_rate": 0.0002,
+      "aggregate_moic": 0.2967663459459426,
+      "payoff_ratio": 0.04514421860396253,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.21569870903649913
+    },
+    {
+      "shadow_hourly_usd": 80.0,
+      "win_rate": 0.0,
+      "aggregate_moic": 0.18627819143088556,
+      "payoff_ratio": 0.0,
+      "kelly_fraction": 0.0,
+      "risk_adjusted_annualised": -0.2854503636369432
+    }
+  ],
+  "outcome_bands": [
+    {
+      "label": "负回报（<0x）",
+      "probability": 0.0
+    },
+    {
+      "label": "近乎全损（0–0.1x）",
+      "probability": 0.0002
+    },
+    {
+      "label": "重大亏损（0.1–0.5x）",
+      "probability": 0.462625
+    },
+    {
+      "label": "小幅亏损（0.5–1x）",
+      "probability": 0.463625
+    },
+    {
+      "label": "小胜（1–2x）",
+      "probability": 0.073425
+    },
+    {
+      "label": "良好（2–5x）",
+      "probability": 0.000125
+    },
+    {
+      "label": "优异（≥5x）",
+      "probability": 0.0
+    }
+  ],
+  "kelly_1m_cny": {
+    "bankroll_cny": 1000000.0,
+    "bankroll_usd": 140000.0,
+    "fx_cny_usd": 0.14,
+    "f_star_numeric": 0.0,
+    "f_star_binary": -1.604673047857762,
+    "full_kelly_cny": 0.0,
+    "half_kelly_cny": 0.0,
+    "quarter_kelly_cny": 0.0,
+    "full_kelly_usd": 0.0,
+    "half_kelly_usd": 0.0,
+    "quarter_kelly_usd": 0.0,
+    "operational_risk_capital_usd": 2000.0,
+    "disclaimer_zh": "理论 Kelly 回答的是『若这是可重复边缘赌注且 p、b 已知，应占资金池多大』；不等于建议把 100 万立刻投入本项目。精益执行仍受 US$2,000 运营风险资本约束。p 为估计值，须连同敏感性网格阅读。"
+  },
+  "kelly_sensitivity": [
+    {
+      "p": 0.05,
+      "b": 0.5,
+      "f_star": -1.8499999999999999,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 1.0,
+      "f_star": -0.8999999999999999,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 2.0,
+      "f_star": -0.425,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 3.0,
+      "f_star": -0.26666666666666666,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 5.0,
+      "f_star": -0.13999999999999999,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 7.0,
+      "f_star": -0.0857142857142857,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.05,
+      "b": 10.0,
+      "f_star": -0.045,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 0.5,
+      "f_star": -1.76,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 1.0,
+      "f_star": -0.8400000000000001,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 2.0,
+      "f_star": -0.38,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 3.0,
+      "f_star": -0.22666666666666668,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 5.0,
+      "f_star": -0.10400000000000001,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 7.0,
+      "f_star": -0.05142857142857143,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.08,
+      "b": 10.0,
+      "f_star": -0.012,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 0.5,
+      "f_star": -1.7,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 1.0,
+      "f_star": -0.8,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 2.0,
+      "f_star": -0.35,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 3.0,
+      "f_star": -0.19999999999999998,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 5.0,
+      "f_star": -0.08,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 7.0,
+      "f_star": -0.028571428571428564,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.1,
+      "b": 10.0,
+      "f_star": 0.009999999999999998,
+      "stake_cny_full": 9999.999999999998,
+      "stake_cny_half": 4999.999999999999,
+      "stake_cny_quarter": 2499.9999999999995
+    },
+    {
+      "p": 0.125,
+      "b": 0.5,
+      "f_star": -1.625,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 1.0,
+      "f_star": -0.75,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 2.0,
+      "f_star": -0.3125,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 3.0,
+      "f_star": -0.16666666666666666,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 5.0,
+      "f_star": -0.05,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 7.0,
+      "f_star": 0.0,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.125,
+      "b": 10.0,
+      "f_star": 0.0375,
+      "stake_cny_full": 37500.0,
+      "stake_cny_half": 18750.0,
+      "stake_cny_quarter": 9375.0
+    },
+    {
+      "p": 0.15,
+      "b": 0.5,
+      "f_star": -1.55,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.15,
+      "b": 1.0,
+      "f_star": -0.7,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.15,
+      "b": 2.0,
+      "f_star": -0.275,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.15,
+      "b": 3.0,
+      "f_star": -0.13333333333333333,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.15,
+      "b": 5.0,
+      "f_star": -0.019999999999999997,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.15,
+      "b": 7.0,
+      "f_star": 0.02857142857142858,
+      "stake_cny_full": 28571.42857142858,
+      "stake_cny_half": 14285.71428571429,
+      "stake_cny_quarter": 7142.857142857145
+    },
+    {
+      "p": 0.15,
+      "b": 10.0,
+      "f_star": 0.065,
+      "stake_cny_full": 65000.0,
+      "stake_cny_half": 32500.0,
+      "stake_cny_quarter": 16250.0
+    },
+    {
+      "p": 0.2,
+      "b": 0.5,
+      "f_star": -1.4000000000000001,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.2,
+      "b": 1.0,
+      "f_star": -0.6000000000000001,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.2,
+      "b": 2.0,
+      "f_star": -0.2,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.2,
+      "b": 3.0,
+      "f_star": -0.06666666666666665,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.2,
+      "b": 5.0,
+      "f_star": 0.039999999999999994,
+      "stake_cny_full": 39999.99999999999,
+      "stake_cny_half": 19999.999999999996,
+      "stake_cny_quarter": 9999.999999999998
+    },
+    {
+      "p": 0.2,
+      "b": 7.0,
+      "f_star": 0.08571428571428573,
+      "stake_cny_full": 85714.28571428572,
+      "stake_cny_half": 42857.14285714286,
+      "stake_cny_quarter": 21428.57142857143
+    },
+    {
+      "p": 0.2,
+      "b": 10.0,
+      "f_star": 0.12,
+      "stake_cny_full": 120000.0,
+      "stake_cny_half": 60000.0,
+      "stake_cny_quarter": 30000.0
+    },
+    {
+      "p": 0.3,
+      "b": 0.5,
+      "f_star": -1.0999999999999999,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.3,
+      "b": 1.0,
+      "f_star": -0.39999999999999997,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.3,
+      "b": 2.0,
+      "f_star": -0.04999999999999999,
+      "stake_cny_full": 0.0,
+      "stake_cny_half": 0.0,
+      "stake_cny_quarter": 0.0
+    },
+    {
+      "p": 0.3,
+      "b": 3.0,
+      "f_star": 0.06666666666666665,
+      "stake_cny_full": 66666.66666666666,
+      "stake_cny_half": 33333.33333333333,
+      "stake_cny_quarter": 16666.666666666664
+    },
+    {
+      "p": 0.3,
+      "b": 5.0,
+      "f_star": 0.16,
+      "stake_cny_full": 160000.0,
+      "stake_cny_half": 80000.0,
+      "stake_cny_quarter": 40000.0
+    },
+    {
+      "p": 0.3,
+      "b": 7.0,
+      "f_star": 0.2,
+      "stake_cny_full": 200000.0,
+      "stake_cny_half": 100000.0,
+      "stake_cny_quarter": 50000.0
+    },
+    {
+      "p": 0.3,
+      "b": 10.0,
+      "f_star": 0.22999999999999998,
+      "stake_cny_full": 229999.99999999997,
+      "stake_cny_half": 114999.99999999999,
+      "stake_cny_quarter": 57499.99999999999
+    }
+  ],
+  "time_kelly": {
+    "hours_budget_5y": 5200.0,
+    "mean_hours_per_attempt": 3456.102,
+    "naive_attempt_fraction_of_budget": 0.664635,
+    "recommended_ideas_at_half_kelly": null,
+    "phase0_hours_committed": 20.0,
+    "note_zh": "分阶段：Phase0 仅承诺约 20 小时验证，保留放弃期权。"
+  },
+  "original_contrast": {
+    "self_annualised": 0.9,
+    "self_win_rate_mid": 0.125,
+    "self_payoff": 7.0,
+    "self_moic": 1.5,
+    "self_risk_adj": 0.2,
+    "recomputed_book_annualised_roi5_6pct": 0.011721951492754235
+  },
+  "decision_zh": "以主口径影子时薪下的胜率、盈亏比与半 Kelly 为决策参考；若半 Kelly 对应金额仍高于精益风险资本，执行层仍按 US$2,000 封顶分阶段投入。"
+}

@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "artifact": "monte_carlo",
+    "generated_by": "scripts/run_all.py",
+    "as_of": "2026-08-02",
+    "generated_on": "2026-08-02",
+    "seed": 20260802
+  },
+  "n_runs": 40000,
+  "months": 60,
+  "seed": 20260802,
+  "summary": {
+    "mean_total_return_usd": 51876.27077971509,
+    "median_total_return_usd": 42227.985722603,
+    "mean_hours": 3456.102,
+    "mean_orders": 964.1742784337986,
+    "mean_revenue_usd": 35161.91693459132,
+    "p_survive_to_end": 0.410975,
+    "p_never_built": 0.0,
+    "p_total_return_zero": 0.0,
+    "total_return_p5": 4580.735858686153,
+    "total_return_p25": 20576.387988805618,
+    "total_return_p50": 42227.985722603,
+    "total_return_p75": 73103.74700354683,
+    "total_return_p95": 133105.52033566713,
+    "orders_p50": 833.8908330126665,
+    "orders_p90": 2002.1917335740443
+  },
+  "external_check_zh": "本模型不标定到固定胜率。若涌现胜率显著高于公开独立开发者『多数产品收入接近零』的常识，应检查流量中枢是否过乐观——报告在风险章节给出影子时薪敏感性。"
+}

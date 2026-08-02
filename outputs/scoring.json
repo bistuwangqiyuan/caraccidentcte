@@ -1,0 +1,800 @@
+{
+  "_meta": {
+    "artifact": "scoring",
+    "generated_by": "scripts/run_all.py",
+    "as_of": "2026-08-02",
+    "generated_on": "2026-08-02",
+    "seed": 20260802
+  },
+  "rubric_version": "1.0",
+  "n_candidates": 7,
+  "n_eliminated": 2,
+  "n_survivors": 5,
+  "n_criteria": 8,
+  "runner_up_id": "workshop-quote-log",
+  "intervals_disjoint": true,
+  "intervals_disjoint_zh": "两者的 5–95 分位区间完全不重叠",
+  "criteria": [
+    {
+      "id": "demand_evidence",
+      "name": "需求可验证性",
+      "weight": 14,
+      "question": "痛点有多少可查证的外部证据？"
+    },
+    {
+      "id": "willingness_to_pay",
+      "name": "付费意愿与客单价",
+      "weight": 12,
+      "question": "买方能否把支出对应到可衡量收益或已在支付的成本？"
+    },
+    {
+      "id": "compliance_safety",
+      "name": "合规安全度",
+      "weight": 18,
+      "question": "在不持有法律/医疗/保险中介牌照的前提下，法律暴露面有多小？"
+    },
+    {
+      "id": "automation",
+      "name": "零人工可自动化度",
+      "weight": 14,
+      "question": "获客、转化、交付、客服、计费、风控能有多少真正无人运行？"
+    },
+    {
+      "id": "distribution",
+      "name": "可分发性",
+      "weight": 12,
+      "question": "在零销售团队下，流量能否以内容/产品驱动获取？"
+    },
+    {
+      "id": "solo_deliverability",
+      "name": "单人 20h 可交付性",
+      "weight": 14,
+      "question": "每周 20 小时能否在 90 天内做出可收费 MVP？"
+    },
+    {
+      "id": "retention_moat",
+      "name": "留存与护城河",
+      "weight": 8,
+      "question": "用户用完是否必然流失？数据/工作流能否形成切换成本？"
+    },
+    {
+      "id": "competitive_gap",
+      "name": "竞争空隙",
+      "weight": 8,
+      "question": "现有方案留下了什么可占据的空隙？"
+    }
+  ],
+  "kill_gates": [
+    {
+      "id": "G1",
+      "name": "合规红线",
+      "rule": "若核心交付在主要目标市场构成未经授权的法律执业（新加坡 Legal Profession Act s32/s33：法律意见、有偿协商/和解人身伤亡索赔、诉讼文书起草等）， 或构成未经授权的医疗诊断（如 CTE 临床诊断），或需金融/保险中介牌照才能交付，则淘汰。\n",
+      "rationale": "单人无牌主体无法合法提供法律意见或医疗诊断；不可执行的高分机会等于零。"
+    },
+    {
+      "id": "G2",
+      "name": "零人工可运营",
+      "rule": "若核心价值交付必须依赖人工销售演示、人工审核、律师审稿或电话客服才能成立，则淘汰。\n",
+      "rationale": "约束条件明确要求全 AI、无人公司模式。"
+    },
+    {
+      "id": "G3",
+      "name": "单人可维护",
+      "rule": "若首个可收费版本预计超过 160 小时（8 周全部可用工时）， 或长期运维需要 7×24 值守、多司法辖区实时法条维护，则淘汰。\n",
+      "rationale": "每周 20 小时是硬约束。"
+    }
+  ],
+  "eliminated": [
+    {
+      "id": "liability-ai-legal",
+      "name": "AI 交通事故责任认定与法律建议 SaaS",
+      "branch": "法律意见（红线对照）",
+      "one_liner": "向车主收费输出过错比例、索赔策略与「法律建议」PDF（原稿主叙事）。",
+      "gates": {
+        "G1": {
+          "verdict": "fail",
+          "reason": "新加坡 Legal Profession Act 1966 s32/s33：无执业证不得执业； 有偿就具体事实给出权利义务意见、有偿协商/和解人身伤亡索赔均属高风险/禁止区。 「AI + 免责声明」不能创造执业豁免。\n",
+          "evidence": [
+            "SG-LPA-S32",
+            "SG-LPA-S33",
+            "SG-LAWGAZETTE-UPL"
+          ]
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "技术上可自动出 PDF，但合规上不可做。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "工程可做，约束在法律而非工时。"
+        }
+      },
+      "failed_gates": [
+        {
+          "gate": "G1",
+          "gate_name": "合规红线",
+          "verdict": "fail",
+          "reason": "新加坡 Legal Profession Act 1966 s32/s33：无执业证不得执业； 有偿就具体事实给出权利义务意见、有偿协商/和解人身伤亡索赔均属高风险/禁止区。 「AI + 免责声明」不能创造执业豁免。\n",
+          "evidence": [
+            "SG-LPA-S32",
+            "SG-LPA-S33",
+            "SG-LAWGAZETTE-UPL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cte-diagnosis",
+      "name": "车事故后 CTE 风险诊断 AI",
+      "branch": "医疗诊断（红线对照）",
+      "one_liner": "基于症状问卷输出 Chronic Traumatic Encephalopathy 风险/诊断建议。",
+      "gates": {
+        "G1": {
+          "verdict": "fail",
+          "reason": "CTE 确定性诊断通常依赖尸检病理学；活体「诊断」缺乏公认临床金标准。 向消费者输出诊断性结论触及医疗误导与潜在无证行医风险，不符合公序良俗与向善原则。\n",
+          "evidence": [
+            "CTE-BU-OVERVIEW",
+            "CTE-UCSF"
+          ]
+        },
+        "G2": {
+          "verdict": "fail",
+          "reason": "高风险医疗结论若要合规通常需要持证临床路径，无法零人工成立。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "问卷产品工程量小，但不应做。"
+        }
+      },
+      "failed_gates": [
+        {
+          "gate": "G1",
+          "gate_name": "合规红线",
+          "verdict": "fail",
+          "reason": "CTE 确定性诊断通常依赖尸检病理学；活体「诊断」缺乏公认临床金标准。 向消费者输出诊断性结论触及医疗误导与潜在无证行医风险，不符合公序良俗与向善原则。\n",
+          "evidence": [
+            "CTE-BU-OVERVIEW",
+            "CTE-UCSF"
+          ]
+        },
+        {
+          "gate": "G2",
+          "gate_name": "零人工可运营",
+          "verdict": "fail",
+          "reason": "高风险医疗结论若要合规通常需要持证临床路径，无法零人工成立。",
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "ranking": [
+    {
+      "id": "evidence-fnol-sg",
+      "name": "新加坡事故后证据包与保险 FNOL 清单",
+      "branch": "事故后工具",
+      "one_liner": "引导拍照/保存证据、生成时间线摘要与保险公司第一通知清单，导出 PDF/ZIP；明确不做过错认定与法律意见。",
+      "gates": {
+        "G1": {
+          "verdict": "pass",
+          "reason": "定位为信息整理与清单工具：用户自填事实、自选材料； 不输出过错比例、不起草和解、不代理索赔。配套强硬免责声明与律师目录外链。\n",
+          "evidence": [
+            "SG-LPA-S33",
+            "POSITION-EVIDENCE-PACK"
+          ]
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "Stripe 支付 + 自动生成 PDF/ZIP + 邮件送达 + FAQ 机器人，可无人运营。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "单一辖区、单一工作流；MVP 估 80 小时 < 160 小时门槛。"
+        }
+      },
+      "failed_gates": [],
+      "total": 6.78,
+      "scores": {
+        "demand_evidence": {
+          "score": 7,
+          "rationale": "SPF 2024 有 7,192 起伤亡事故；GIA 显示车险保费与赔付活跃。痛点可证，付费转化仍待测。",
+          "evidence": [
+            "SPF-ARTS-2024",
+            "SPF-TRAFFIC-ANNUAL-2024",
+            "GIA-MOTOR-2025"
+          ],
+          "weight": 14.0,
+          "contribution": 0.98
+        },
+        "willingness_to_pay": {
+          "score": 5,
+          "rationale": "S$39 一次性对「整理材料省时间」可论证，但低于律师费；付费意愿待测，故不打高分。",
+          "evidence": [
+            "PRICE-BAND-DIY"
+          ],
+          "weight": 12.0,
+          "contribution": 0.6
+        },
+        "compliance_safety": {
+          "score": 8,
+          "rationale": "不做法律意见/PI 和解；主要义务是 PDPA 与真实宣传。仍须严格文案审查。",
+          "evidence": [
+            "SG-LPA-S33",
+            "POSITION-EVIDENCE-PACK"
+          ],
+          "weight": 18.0,
+          "contribution": 1.44
+        },
+        "automation": {
+          "score": 8,
+          "rationale": "六环节均可软件化；获客靠内容而非销售。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 1.12
+        },
+        "distribution": {
+          "score": 6,
+          "rationale": "高意图搜索词存在（accident checklist, insurance claim documents SG），但量级有限。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.72
+        },
+        "solo_deliverability": {
+          "score": 8,
+          "rationale": "表单+模板+打包+支付，适合 20h/周。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 1.12
+        },
+        "retention_moat": {
+          "score": 3,
+          "rationale": "事故低频；靠年订家庭包与口碑弱复购，不伪装高留存。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.24
+        },
+        "competitive_gap": {
+          "score": 7,
+          "rationale": "新加坡缺少专注「证据打包」的轻量产品；用户多用网盘+聊天记录凑合。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.56
+        }
+      },
+      "rank": 1,
+      "robustness": {
+        "p_rank1": 1.0,
+        "mean_rank": 1.0,
+        "p_top3": 1.0,
+        "score_p05": 6.631787805524227,
+        "score_p95": 6.924385301141656
+      }
+    },
+    {
+      "id": "workshop-quote-log",
+      "name": "修车报价对比记录器",
+      "branch": "事故后工具",
+      "one_liner": "结构化记录多家车间报价与照片，导出对比表，供车主自用。",
+      "gates": {
+        "G1": {
+          "verdict": "pass",
+          "reason": "纯记录工具，无法律/医疗主张。"
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "可全自动。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "MVP 很小。"
+        }
+      },
+      "failed_gates": [],
+      "total": 5.88,
+      "scores": {
+        "demand_evidence": {
+          "score": 3,
+          "rationale": "有用但替代品（电子表格/聊天）极强；查无新加坡垂直付费一手证据，故分 capped 于 3。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.42
+        },
+        "willingness_to_pay": {
+          "score": 3,
+          "rationale": "免费表格足够好，付费意愿弱。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.36
+        },
+        "compliance_safety": {
+          "score": 9,
+          "rationale": "几乎无牌照问题；纯记录工具，不输出法律或医疗结论。",
+          "evidence": [
+            "POSITION-EVIDENCE-PACK"
+          ],
+          "weight": 18.0,
+          "contribution": 1.62
+        },
+        "automation": {
+          "score": 9,
+          "rationale": "极易自动化。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 1.26
+        },
+        "distribution": {
+          "score": 4,
+          "rationale": "搜索意图弱，获客难。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.48
+        },
+        "solo_deliverability": {
+          "score": 9,
+          "rationale": "可很快做出。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 1.26
+        },
+        "retention_moat": {
+          "score": 2,
+          "rationale": "用完即走。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.16
+        },
+        "competitive_gap": {
+          "score": 4,
+          "rationale": "空隙存在但商业价值可疑。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.32
+        }
+      },
+      "rank": 2,
+      "robustness": {
+        "p_rank1": 0.0,
+        "mean_rank": 2.004,
+        "p_top3": 1.0,
+        "score_p05": 5.56998163428848,
+        "score_p95": 6.183883236874824
+      }
+    },
+    {
+      "id": "fleet-incident-log",
+      "name": "网约车/车队事故记录模板",
+      "branch": "B2B 轻量",
+      "one_liner": "车队管理员用的标准化事故记录与证据文件夹（多司机），导出合规存档包。",
+      "gates": {
+        "G1": {
+          "verdict": "pass",
+          "reason": "企业内部记录工具；不做对外法律意见。"
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "自助注册+席位订阅可自动；但 B2B 获客常需销售——见评分。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "产品可做；销售周期是风险。"
+        }
+      },
+      "failed_gates": [],
+      "total": 5.46,
+      "scores": {
+        "demand_evidence": {
+          "score": 5,
+          "rationale": "车队有事故记录需求；缺公开付费数据。",
+          "evidence": [
+            "SPF-ARTS-2024"
+          ],
+          "weight": 14.0,
+          "contribution": 0.7
+        },
+        "willingness_to_pay": {
+          "score": 6,
+          "rationale": "B2B 预算强于 C 端，但成交周期长。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.72
+        },
+        "compliance_safety": {
+          "score": 7,
+          "rationale": "相对安全；企业内部记录，不做对外法律意见；注意员工个人数据。",
+          "evidence": [
+            "POSITION-EVIDENCE-PACK"
+          ],
+          "weight": 18.0,
+          "contribution": 1.26
+        },
+        "automation": {
+          "score": 6,
+          "rationale": "交付可自动；获客难全自动。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.84
+        },
+        "distribution": {
+          "score": 3,
+          "rationale": "缺零销售分发入口，倾向人工 BD。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.36
+        },
+        "solo_deliverability": {
+          "score": 5,
+          "rationale": "多租户与权限增加工程量。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.7
+        },
+        "retention_moat": {
+          "score": 6,
+          "rationale": "工作流嵌入后粘性较好。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.48
+        },
+        "competitive_gap": {
+          "score": 5,
+          "rationale": "与车队管理套件功能重叠。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.4
+        }
+      },
+      "rank": 3,
+      "robustness": {
+        "p_rank1": 0.0,
+        "mean_rank": 3.22635,
+        "p_top3": 0.76965,
+        "score_p05": 5.3356390736910555,
+        "score_p95": 5.583403777857452
+      }
+    },
+    {
+      "id": "policy-clause-map",
+      "name": "车险保单条款摘录对照清单",
+      "branch": "事故后工具",
+      "one_liner": "用户上传保单 PDF，AI 摘录「需要通知的期限/材料清单」类条款为对照表，不做承保决定。",
+      "gates": {
+        "G1": {
+          "verdict": "pass",
+          "reason": "条款摘录+用户自核对；不输出「你是否获赔」结论，避免保险建议牌照灰色区。",
+          "evidence": [
+            "POSITION-EVIDENCE-PACK"
+          ]
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "上传→解析→表格可自动。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "PDF 解析工作量中等，MVP 可控制在 120h 内。"
+        }
+      },
+      "failed_gates": [],
+      "total": 5.4,
+      "scores": {
+        "demand_evidence": {
+          "score": 5,
+          "rationale": "车险合同复杂是常识级痛点；缺新加坡垂直付费数据。",
+          "evidence": [
+            "GIA-MOTOR-2025"
+          ],
+          "weight": 14.0,
+          "contribution": 0.7
+        },
+        "willingness_to_pay": {
+          "score": 4,
+          "rationale": "与保险公司/经纪人免费渠道竞争；客单价压力大。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.48
+        },
+        "compliance_safety": {
+          "score": 6,
+          "rationale": "若文案滑向「理赔建议」则危险；需极窄功能。",
+          "evidence": [
+            "POSITION-EVIDENCE-PACK"
+          ],
+          "weight": 18.0,
+          "contribution": 1.08
+        },
+        "automation": {
+          "score": 7,
+          "rationale": "可自动，但解析错误需要产品内强提示「以保单原文为准」。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.98
+        },
+        "distribution": {
+          "score": 5,
+          "rationale": "SEO 可行，差异化弱于证据包。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.6
+        },
+        "solo_deliverability": {
+          "score": 6,
+          "rationale": "PDF 版式多样，工程坑多于清单工具。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.84
+        },
+        "retention_moat": {
+          "score": 4,
+          "rationale": "换保/续保时可复用。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.32
+        },
+        "competitive_gap": {
+          "score": 5,
+          "rationale": "通用 PDF AI 已部分覆盖。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.4
+        }
+      },
+      "rank": 4,
+      "robustness": {
+        "p_rank1": 0.0,
+        "mean_rank": 3.76965,
+        "p_top3": 0.23035,
+        "score_p05": 5.300234606471468,
+        "score_p95": 5.497423707265802
+      }
+    },
+    {
+      "id": "us-cte-content",
+      "name": "美国向 car accident + CTE 科普与律师目录站",
+      "branch": "内容站",
+      "one_liner": "科普 CTE 与脑外伤常识 + Law Society/州律协公开名录链出；不做诊断、不做案件代理、不分享律师费。",
+      "gates": {
+        "G1": {
+          "verdict": "pass",
+          "reason": "严格限定为一般性健康/法律信息与公开名录； 不针对用户事实给出胜诉概率或诊断；不从事 PI 招揽灰色分成（各州规则不同，默认不做收费转介）。\n",
+          "evidence": [
+            "CTE-BU-OVERVIEW",
+            "POSITION-CONTENT-DIR"
+          ]
+        },
+        "G2": {
+          "verdict": "pass",
+          "reason": "内容生成+静态站+广告/联盟可自动化；转介若收费则引入人工与合规，本候选默认无收费转介。"
+        },
+        "G3": {
+          "verdict": "pass",
+          "reason": "内容站可启动，但英文 SEO 竞争消耗大量持续工时。"
+        }
+      },
+      "failed_gates": [],
+      "total": 4.86,
+      "scores": {
+        "demand_evidence": {
+          "score": 6,
+          "rationale": "种子词 Trends 兴趣与美国 PI 内容生态可观察；变现质量不稳定。",
+          "evidence": [
+            "CTE-BU-OVERVIEW"
+          ],
+          "weight": 14.0,
+          "contribution": 0.84
+        },
+        "willingness_to_pay": {
+          "score": 3,
+          "rationale": "主要靠广告 RPM，而非用户付费；ARPU 不确定。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.36
+        },
+        "compliance_safety": {
+          "score": 5,
+          "rationale": "医疗/法律信息边界需持续文案审查；各州律师广告规则复杂。",
+          "evidence": [
+            "POSITION-CONTENT-DIR"
+          ],
+          "weight": 18.0,
+          "contribution": 0.9
+        },
+        "automation": {
+          "score": 7,
+          "rationale": "内容可 AI 辅助，但质量与合规审查仍占维护时间。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.98
+        },
+        "distribution": {
+          "score": 5,
+          "rationale": "SEO 竞争激烈（美国 PI 内容农场）。",
+          "evidence": [],
+          "weight": 12.0,
+          "contribution": 0.6
+        },
+        "solo_deliverability": {
+          "score": 5,
+          "rationale": "20h/周可做，但与「可检验的产品收入」相比更像流量赌博。",
+          "evidence": [],
+          "weight": 14.0,
+          "contribution": 0.7
+        },
+        "retention_moat": {
+          "score": 3,
+          "rationale": "内容站护城河弱。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.24
+        },
+        "competitive_gap": {
+          "score": 3,
+          "rationale": "赛道拥挤。",
+          "evidence": [],
+          "weight": 8.0,
+          "contribution": 0.24
+        }
+      },
+      "rank": 5,
+      "robustness": {
+        "p_rank1": 0.0,
+        "mean_rank": 5.0,
+        "p_top3": 0.0,
+        "score_p05": 4.725806709482115,
+        "score_p95": 4.990196773149878
+      }
+    }
+  ],
+  "score_gaps": {
+    "demand_evidence": 4,
+    "willingness_to_pay": 2,
+    "compliance_safety": -1,
+    "automation": -1,
+    "distribution": 2,
+    "solo_deliverability": -1,
+    "retention_moat": 1,
+    "competitive_gap": 3
+  },
+  "winner": {
+    "id": "evidence-fnol-sg",
+    "name": "新加坡事故后证据包与保险 FNOL 清单",
+    "total": 6.78,
+    "margin_over_runner_up": 0.9000000000000004,
+    "p_rank1_under_weight_perturbation": 1.0
+  },
+  "robustness": {
+    "weight_perturbation": {
+      "draws": 20000,
+      "magnitude": 0.3,
+      "winner_p_rank1": 1.0,
+      "all": {
+        "evidence-fnol-sg": {
+          "p_rank1": 1.0,
+          "mean_rank": 1.0,
+          "p_top3": 1.0,
+          "score_p05": 6.631787805524227,
+          "score_p95": 6.924385301141656
+        },
+        "workshop-quote-log": {
+          "p_rank1": 0.0,
+          "mean_rank": 2.004,
+          "p_top3": 1.0,
+          "score_p05": 5.56998163428848,
+          "score_p95": 6.183883236874824
+        },
+        "fleet-incident-log": {
+          "p_rank1": 0.0,
+          "mean_rank": 3.22635,
+          "p_top3": 0.76965,
+          "score_p05": 5.3356390736910555,
+          "score_p95": 5.583403777857452
+        },
+        "policy-clause-map": {
+          "p_rank1": 0.0,
+          "mean_rank": 3.76965,
+          "p_top3": 0.23035,
+          "score_p05": 5.300234606471468,
+          "score_p95": 5.497423707265802
+        },
+        "us-cte-content": {
+          "p_rank1": 0.0,
+          "mean_rank": 5.0,
+          "p_top3": 0.0,
+          "score_p05": 4.725806709482115,
+          "score_p95": 4.990196773149878
+        }
+      }
+    },
+    "leave_one_out": [
+      {
+        "dropped_criterion": "demand_evidence",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.744186046511628,
+        "runner_up": "workshop-quote-log",
+        "margin": 0.39534883720930303
+      },
+      {
+        "dropped_criterion": "willingness_to_pay",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 7.0227272727272725,
+        "runner_up": "workshop-quote-log",
+        "margin": 0.75
+      },
+      {
+        "dropped_criterion": "compliance_safety",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.512195121951219,
+        "runner_up": "policy-clause-map",
+        "margin": 1.2439024390243896
+      },
+      {
+        "dropped_criterion": "automation",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.5813953488372094,
+        "runner_up": "workshop-quote-log",
+        "margin": 1.2093023255813957
+      },
+      {
+        "dropped_criterion": "distribution",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.886363636363637,
+        "runner_up": "workshop-quote-log",
+        "margin": 0.75
+      },
+      {
+        "dropped_criterion": "solo_deliverability",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.5813953488372094,
+        "runner_up": "fleet-incident-log",
+        "margin": 1.0465116279069768
+      },
+      {
+        "dropped_criterion": "retention_moat",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 7.108695652173913,
+        "runner_up": "workshop-quote-log",
+        "margin": 0.8913043478260869
+      },
+      {
+        "dropped_criterion": "competitive_gap",
+        "winner": "evidence-fnol-sg",
+        "winner_total": 6.760869565217392,
+        "runner_up": "workshop-quote-log",
+        "margin": 0.7173913043478262
+      }
+    ],
+    "leave_one_out_winner_stable": true,
+    "leave_one_out_winner_ids": [
+      "evidence-fnol-sg"
+    ]
+  },
+  "evidence_index": [
+    "CTE-BU-OVERVIEW",
+    "GIA-MOTOR-2025",
+    "POSITION-CONTENT-DIR",
+    "POSITION-EVIDENCE-PACK",
+    "PRICE-BAND-DIY",
+    "SG-LPA-S33",
+    "SPF-ARTS-2024",
+    "SPF-TRAFFIC-ANNUAL-2024"
+  ],
+  "sources_available": [
+    "BASE-FABRICATED-WARNING",
+    "BILL-STRIPE-SG",
+    "CNA-SPF-2024",
+    "COST-STACK-LEAN",
+    "CTE-BU-OVERVIEW",
+    "CTE-UCSF",
+    "GIA-MOTOR-2025",
+    "ORIGINAL-NEED-TXT",
+    "POSITION-CONTENT-DIR",
+    "POSITION-EVIDENCE-PACK",
+    "PRICE-BAND-DIY",
+    "SG-LAWGAZETTE-UPL",
+    "SG-LPA-S32",
+    "SG-LPA-S33",
+    "SPF-ARTS-2024",
+    "SPF-TRAFFIC-ANNUAL-2024",
+    "WHO-GSRRS-2023"
+  ],
+  "n_sources_available": 17,
+  "n_evidence_cited": 8
+}

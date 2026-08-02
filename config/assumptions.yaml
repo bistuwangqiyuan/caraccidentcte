@@ -1,0 +1,138 @@
+# 全部建模假设。每项带 source：证据 id / 推导 / 政策参数 / 待测量 / 推测
+meta:
+  as_of: "2026-08-02"
+  currency: "USD"
+  fx:
+    sgd_usd: 0.74
+    cny_usd: 0.14
+    source: "政策参数"
+    note: "仅用于把新元定价与人民币 Kelly 资金池换算为美元口径；不做汇率预测。"
+
+capital:
+  risk_capital_usd: 2000.0
+  monthly_burn_cap_usd: 100.0
+  theoretical_bankroll_cny: 1000000.0
+  source: "政策参数"
+  note: >
+    运营风险资本 ≤ US$2,000、月净烧 ≤ US$100 为精益硬约束。
+    theoretical_bankroll_cny=100万 仅用于 Kelly 理论仓位报告，不等于建议立刻投入 100 万。
+
+operating:
+  hours_per_week: 20.0
+  mvp_build_hours: 80.0
+  maintenance_hours_base: 4.0
+  maintenance_hours_per_order: 0.15
+  maintenance_cap_share: 0.45
+  overload_churn_multiplier: 1.0
+  source: "政策参数 / 待测量"
+  note: >
+    MVP 估计 80 小时：引导式清单 + 文件上传 + PDF/ZIP 打包 + Stripe + 邮件交付。
+    不做过错认定引擎、不做多国法条。maintenance_hours_per_order 待前 30 单实测。
+
+pricing:
+  one_time_sgd: 39.0
+  one_time_usd: 28.86
+  # 可选年订「车主应急包」：家庭/多车复用
+  annual_plan_sgd: 79.0
+  annual_plan_usd: 58.46
+  annual_attach_rate: 0.12
+  source: "推测（锚定公开 DIY 文档工具低价位带） / 待测量"
+  note: >
+    一次性 S$39 落在 DIY 文档/清单工具常见 S$15–79 带中段，远低于原稿 ARPU $250。
+    非实测转化价；Phase 0 A/B 必须替换。one_time_usd = 39 × 0.74。
+
+market:
+  sg_fatal_injury_accidents_2024: 7192
+  sg_fatalities_2024: 142
+  sg_injured_persons_2024: 9302
+  source: "SPF-ARTS-2024 / SPF-TRAFFIC-ANNUAL-2024"
+  note: "新加坡 2024 致命+受伤事故 7,192 起。财产损失-only 事故无同系列干净总数。"
+  som_orders_y1_base: 180
+  som_orders_y1_low: 40
+  som_orders_y1_high: 450
+  source: "推导 / 推测"
+  note: >
+    基线 SOM：假设可达渗透约 7192×2.5%≈180 付费包/年（含部分财产损失与重复使用）。
+    高案 450 仍远低于原稿「10 万车主」。低案 40 = 验证失败阈值附近。
+
+costs:
+  stripe_percent: 0.034
+  stripe_fixed_usd: 0.50
+  source_billing: "BILL-STRIPE-SG"
+  note_billing: "新加坡 Stripe 约 3.4%+$0.50；单次支付可接受。非 MOR 因初期仅 SG。"
+  llm_usd_per_order: 0.08
+  source_llm: "推导"
+  note_llm: "清单文案+摘要约数万 token；按当前主流 API 价取 $0.08 含余量。"
+  storage_usd_per_order: 0.03
+  email_usd_per_order: 0.01
+  fixed_monthly_usd: 18.0
+  source_fixed: "COST-STACK-LEAN"
+  note_fixed: "域名+对象存储+错误监控免费档+静态托管；刻意避开需人工申报的复杂税栈。"
+
+funnel:
+  # 访客→付费：冷流量 DIY 工具常见 1–5%；10% 为原稿乐观值，此处不用作基线
+  visitor_to_paid:
+    low: 0.008
+    mode: 0.018
+    high: 0.045
+    source: "推测 / 待测量"
+  monthly_organic_visitors:
+    low: 80
+    mode: 220
+    high: 600
+    source: "推测 / 待测量"
+  content_units_per_hour: 0.35
+  seo_visitors_per_content_unit:
+    low: 2
+    mode: 8
+    high: 25
+    source: "推测 / 待测量"
+  content_monthly_decay: 0.08
+  content_niche_capacity: 80
+  content_share_of_growth_hours: 0.70
+  paid_ads_enabled: false
+  note: "零广告预算起步；获客币种是时间。启用广告须另测 CAC，默认关闭。"
+
+opportunity_cost:
+  shadow_hourly_usd: 25.0
+  shadow_hourly_low: 10.0
+  shadow_hourly_high: 50.0
+  source: "政策参数"
+  note: "影子时薪表达时间机会成本；结论对该参数敏感，报告给临界值扫掠。"
+
+behaviour:
+  abandon_zero_revenue_months: 6
+  life_event_monthly_hazard: 0.015
+  source: "政策参数 / 推测"
+  note: "连续 6 个月零收入则放弃；外生生活中断年化约 16%。"
+
+simulation:
+  n_runs: 40000
+  months: 60
+  seed: 20260802
+
+exit:
+  # 微型工具站出售倍数（年利润），保守
+  multiple_of_annual_profit:
+    low: 2.0
+    mode: 2.8
+    high: 4.0
+  source: "推测（公开微型站交易倍数量级）"
+  note: "非承诺；仅用于期末残值抽样。"
+
+scenarios:
+  pessimistic:
+    monthly_visitors: 80
+    visitor_to_paid: 0.008
+    annual_attach: 0.05
+    label: "悲观"
+  base:
+    monthly_visitors: 220
+    visitor_to_paid: 0.018
+    annual_attach: 0.12
+    label: "基线"
+  optimistic:
+    monthly_visitors: 600
+    visitor_to_paid: 0.040
+    annual_attach: 0.20
+    label: "乐观"

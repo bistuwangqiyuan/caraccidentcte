@@ -1,0 +1,179 @@
+{
+  "_meta": {
+    "artifact": "audit_original",
+    "generated_by": "scripts/run_all.py",
+    "as_of": "2026-08-02",
+    "generated_on": "2026-08-02",
+    "seed": 20260802
+  },
+  "bindings": {
+    "annualised_90": {
+      "literal": "年化约90%",
+      "found": true
+    },
+    "win_rate": {
+      "literal": "约10%-15%",
+      "found": true
+    },
+    "payoff_ratio": {
+      "literal": "约7:1",
+      "found": true
+    },
+    "risk_adj": {
+      "literal": "约20%",
+      "found": true
+    },
+    "moic": {
+      "literal": "约1.5x",
+      "found": true
+    },
+    "roi_ladder_large": {
+      "literal": "种子轮第1-5年账面ROI分别为120%、240%、360%、480%、600%",
+      "found": true
+    },
+    "roi_y5_small": {
+      "literal": "第5年 6%",
+      "found": true
+    },
+    "tam": {
+      "literal": "潜在市场规模约20亿美元",
+      "found": true
+    },
+    "accidents_2m": {
+      "literal": "每年约有200万起交通事故",
+      "found": true
+    },
+    "som_users": {
+      "literal": "目标客户为10万车主与20家保险公司",
+      "found": true
+    },
+    "y1_rev_table": {
+      "literal": "$500,000",
+      "found": true
+    },
+    "assumptions": {
+      "literal": "假设CAC为$20，转化率10%，ARPU为$250，毛利率70%",
+      "found": true
+    },
+    "seed": {
+      "literal": "假设种子轮投资金额为$500,000",
+      "found": true
+    },
+    "verify_script": {
+      "literal": "scripts/verify_bp_math.py",
+      "found": true
+    },
+    "errata": {
+      "literal": "【复算校准】",
+      "found": true
+    }
+  },
+  "claimed": {
+    "annualised_book": 0.9,
+    "win_rate_low": 0.1,
+    "win_rate_high": 0.15,
+    "win_rate_mid": 0.125,
+    "payoff_ratio": 7.0,
+    "moic": 1.5,
+    "risk_adjusted_annualised": 0.2,
+    "roi5_large": 6.0,
+    "roi5_small": 0.06,
+    "seed_usd": 500000.0,
+    "y1_revenue_table_usd": 500000.0,
+    "som_text_usd": 5000000.0,
+    "cac_usd": 20.0,
+    "conversion_rate": 0.1,
+    "arpu_usd": 250.0,
+    "gross_margin": 0.7,
+    "y1_users": 100000.0,
+    "sg_accidents_official": 7192.0
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "title": "同一文件对第5年账面 ROI 给出两套相差 100 倍的数字",
+      "claimed": "执行摘要：ROI 阶梯至 600%；文末指标区：第5年 6%",
+      "recomputed": "两处第5年数值之比 = 100 倍",
+      "verdict": "矛盾",
+      "formula": "600% ÷ 6% = 100",
+      "note": "两套数字不可能同时为真。后续年化/MOIC/风险调整年化建立在未定义输入上。"
+    },
+    {
+      "id": "F2",
+      "title": "自报账面年化 90% 与两套 ROI 阶梯均不相容",
+      "claimed": "年化（账面）90%",
+      "recomputed": "若 ROI5=600%（期末 7.00x）→ 年化 47.6%；若 ROI5=6%（期末 1.06x）→ 年化 1.2%",
+      "verdict": "矛盾",
+      "formula": "年化 = M^(1/5) - 1；反解 M = 1.90^5",
+      "note": "支撑 90% 年化需要期末倍数 24.76x，原文未给出该量级。"
+    },
+    {
+      "id": "F3",
+      "title": "SOM 文字『首年约500万美元』与财务表 Y1 $500,000 相差 10 倍",
+      "claimed": "SOM 叙述约 $5,000,000；财务表 Y1 $500,000",
+      "recomputed": "比值 = 10 倍",
+      "verdict": "矛盾",
+      "formula": "同一『首年收入』不得有两套量纲",
+      "note": "量纲错误使下游 EBITDA 与回报叙述失去锚点。"
+    },
+    {
+      "id": "F4",
+      "title": "『10万车主 × ARPU $250』与财务表/SPF 事故量级均不相容",
+      "claimed": "10万车主、ARPU $250 → 隐含营收 $25,000,000；表内 Y1 $500,000",
+      "recomputed": "SPF 2024 致命+受伤事故仅约 7,192 起；10万付费车主意味着渗透远超官方伤亡事故池",
+      "verdict": "不可行",
+      "formula": "Revenue ≈ Users × ARPU；SOM ⊆ 官方事故量级",
+      "note": "即使用财产损失事故放大，原稿也未给出可核对来源。"
+    },
+    {
+      "id": "F5",
+      "title": "自报 MOIC 1.5x / 风险调整年化 20% 与胜率及 ROI5=6% 复算不符",
+      "claimed": "MOIC 1.50x；风险调整年化 20%；胜率中值 12.5%",
+      "recomputed": "EV∈[0.13x, 1.01x]；风险调整年化∈[-33.3%, 0.1%]",
+      "verdict": "矛盾",
+      "formula": "EV=[p·M, p·M+(1-p)]；风险调整年化=EV^(1/5)-1",
+      "note": "原文末尾【复算校准】已部分指出；本审计确认应以复算口径为准。"
+    },
+    {
+      "id": "F6",
+      "title": "若直接采用自报胜率与盈亏比，Kelly 全仓含义需单独审视",
+      "claimed": "p=12.5%，b=7:1",
+      "recomputed": "二项 Kelly f* = (bp−q)/b = 0.0%；对 100 万资金池全 Kelly 约 $0 量级需按币种换算",
+      "verdict": "口径提示",
+      "formula": "f* = (b·p − q)/b",
+      "note": "自报 b=7 与内部财务矛盾并存时，Kelly 数字会放大错误前提；重建报告改用蒙特卡洛分布。"
+    },
+    {
+      "id": "F7",
+      "title": "『AI 法律责任认定』零人工收费模式触达新加坡法律执业红线",
+      "claimed": "选定机会为责任认定法律支持 SaaS，NLP 生成法律建议",
+      "recomputed": "Legal Profession Act s32/s33：无执业证不得执业；有偿 PI 和解尤其危险",
+      "verdict": "不可行",
+      "formula": "合规闸门优先于商业想象",
+      "note": "重建方向改为证据包/FNOL 清单等信息不具法律意见属性的工具。"
+    }
+  ],
+  "math_block": {
+    "roi5_pct_used": 6.0,
+    "M": 1.06,
+    "book_annualised": 0.011721951492754235,
+    "win_rate_mid": 0.125,
+    "ev_loss_to_zero": 0.1325,
+    "ev_loss_to_breakeven": 1.0075,
+    "risk_adj_annualised_zero": -0.3325124407513602,
+    "risk_adj_annualised_breakeven": 0.0014955201442898858,
+    "self_annualised": 0.9,
+    "self_moic": 1.5,
+    "self_risk_adj": 0.2,
+    "kelly_binary_on_self_reported": 0.0
+  },
+  "summary": {
+    "n_findings": 7,
+    "n_contradictions": 4,
+    "n_infeasible": 2,
+    "verdict_zh": "原稿不可作为可执行 BP；须合规重定位并自下而上重算。",
+    "recommended_roi5_for_errata": 0.06,
+    "recommended_book_annualised": 0.011721951492754235
+  },
+  "narrative_zh": "对 need.txt 的七项审计显示：ROI 阶梯自相矛盾、年化 90% 无支撑、营收量纲冲突、SOM 超越 SPF 事故池、回报指标与复算不符，且主叙事触达法律执业红线。重建必须更换产品边界并重算。"
+}

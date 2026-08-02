@@ -1,0 +1,366 @@
+{
+  "count": 60,
+  "as_of": "2026-08-02",
+  "entries": [
+    {
+      "path": "risk_metrics.primary.payoff_ratio",
+      "fmt": "ratio",
+      "raw": 0.5520422337082105,
+      "rendered": "0.55 : 1"
+    },
+    {
+      "path": "risk_metrics.primary.kelly_fraction_binary",
+      "fmt": "pct",
+      "raw": -1.604673047857762,
+      "rendered": "-160.5%"
+    },
+    {
+      "path": "monte_carlo.n_runs",
+      "fmt": "int",
+      "raw": 40000,
+      "rendered": "40,000"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.bankroll_cny",
+      "fmt": "num0",
+      "raw": 1000000.0,
+      "rendered": "1,000,000"
+    },
+    {
+      "path": "unit_economics.constraints.hours_per_week",
+      "fmt": "num0",
+      "raw": 20.0,
+      "rendered": "20"
+    },
+    {
+      "path": "unit_economics.constraints.risk_capital_usd",
+      "fmt": "usd",
+      "raw": 2000.0,
+      "rendered": "$2,000"
+    },
+    {
+      "path": "bp_plan.winner_name",
+      "fmt": "esc",
+      "raw": "新加坡事故后证据包与保险 FNOL 清单",
+      "rendered": "新加坡事故后证据包与保险 FNOL 清单"
+    },
+    {
+      "path": "bp_plan.go_no_go.recommend_zh",
+      "fmt": "esc",
+      "raw": "建议启动 Phase0（约 20 小时）做合规文案与原型验证；主口径胜率/盈亏比偏弱，Phase0 后若漏斗无改善应停损，勿加码到 100 万。",
+      "rendered": "建议启动 Phase0（约 20 小时）做合规文案与原型验证；主口径胜率/盈亏比偏弱，Phase0 后若漏斗无改善应停损，勿加码到 100 万。"
+    },
+    {
+      "path": "risk_metrics.primary.win_rate",
+      "fmt": "pct",
+      "raw": 0.07355,
+      "rendered": "7.4%"
+    },
+    {
+      "path": "risk_metrics.primary.risk_adj_annualised_probweighted",
+      "fmt": "pct",
+      "raw": -0.10112191728039843,
+      "rendered": "-10.1%"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.half_kelly_cny",
+      "fmt": "num0",
+      "raw": 0.0,
+      "rendered": "0"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.disclaimer_zh",
+      "fmt": "esc",
+      "raw": "理论 Kelly 回答的是『若这是可重复边缘赌注且 p、b 已知，应占资金池多大』；不等于建议把 100 万立刻投入本项目。精益执行仍受 US$2,000 运营风险资本约束。p 为估计值，须连同敏感性网格阅读。",
+      "rendered": "理论 Kelly 回答的是『若这是可重复边缘赌注且 p、b 已知，应占资金池多大』；不等于建议把 100 万立刻投入本项目。精益执行仍受 US$2,000 运营风险资本约束。p 为估计值，须连同敏感性网格阅读。"
+    },
+    {
+      "path": "bp_plan.winner_name",
+      "fmt": "esc",
+      "raw": "新加坡事故后证据包与保险 FNOL 清单",
+      "rendered": "新加坡事故后证据包与保险 FNOL 清单"
+    },
+    {
+      "path": "bp_plan.winner_score",
+      "fmt": "num2",
+      "raw": 6.78,
+      "rendered": "6.78"
+    },
+    {
+      "path": "unit_economics.constraints.risk_capital_usd",
+      "fmt": "usd",
+      "raw": 2000.0,
+      "rendered": "$2,000"
+    },
+    {
+      "path": "audit_original.summary.verdict_zh",
+      "fmt": "esc",
+      "raw": "原稿不可作为可执行 BP；须合规重定位并自下而上重算。",
+      "rendered": "原稿不可作为可执行 BP；须合规重定位并自下而上重算。"
+    },
+    {
+      "path": "audit_original.narrative_zh",
+      "fmt": "esc",
+      "raw": "对 need.txt 的七项审计显示：ROI 阶梯自相矛盾、年化 90% 无支撑、营收量纲冲突、SOM 超越 SPF 事故池、回报指标与复算不符，且主叙事触达法律执业红线。重建必须更换产品边界并重算。",
+      "rendered": "对 need.txt 的七项审计显示：ROI 阶梯自相矛盾、年化 90% 无支撑、营收量纲冲突、SOM 超越 SPF 事故池、回报指标与复算不符，且主叙事触达法律执业红线。重建必须更换产品边界并重算。"
+    },
+    {
+      "path": "audit_original.claimed.annualised_book",
+      "fmt": "pct0",
+      "raw": 0.9,
+      "rendered": "90%"
+    },
+    {
+      "path": "audit_original.math_block.book_annualised",
+      "fmt": "pct2",
+      "raw": 0.011721951492754235,
+      "rendered": "1.17%"
+    },
+    {
+      "path": "audit_original.math_block.risk_adj_annualised_zero",
+      "fmt": "pct2",
+      "raw": -0.3325124407513602,
+      "rendered": "-33.25%"
+    },
+    {
+      "path": "scoring.n_candidates",
+      "fmt": "int",
+      "raw": 7,
+      "rendered": "7"
+    },
+    {
+      "path": "scoring.n_eliminated",
+      "fmt": "int",
+      "raw": 2,
+      "rendered": "2"
+    },
+    {
+      "path": "scoring.n_survivors",
+      "fmt": "int",
+      "raw": 5,
+      "rendered": "5"
+    },
+    {
+      "path": "scoring.winner.name",
+      "fmt": "esc",
+      "raw": "新加坡事故后证据包与保险 FNOL 清单",
+      "rendered": "新加坡事故后证据包与保险 FNOL 清单"
+    },
+    {
+      "path": "scoring.winner.p_rank1_under_weight_perturbation",
+      "fmt": "pct",
+      "raw": 1.0,
+      "rendered": "100.0%"
+    },
+    {
+      "path": "scoring.robustness.leave_one_out_winner_stable",
+      "fmt": "raw",
+      "raw": true,
+      "rendered": "是"
+    },
+    {
+      "path": "scoring.intervals_disjoint_zh",
+      "fmt": "esc",
+      "raw": "两者的 5–95 分位区间完全不重叠",
+      "rendered": "两者的 5–95 分位区间完全不重叠"
+    },
+    {
+      "path": "bp_plan.positioning.headline",
+      "fmt": "esc",
+      "raw": "新加坡事故后证据包与保险 FNOL 清单",
+      "rendered": "新加坡事故后证据包与保险 FNOL 清单"
+    },
+    {
+      "path": "bp_plan.positioning.promise",
+      "fmt": "esc",
+      "raw": "帮你在事故后把该拍的、该留的、该交给保险公司的材料一次整理好。",
+      "rendered": "帮你在事故后把该拍的、该留的、该交给保险公司的材料一次整理好。"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.acquisition",
+      "fmt": "esc",
+      "raw": "SEO/内容清单页 + 站内转化；默认关闭付费广告",
+      "rendered": "SEO/内容清单页 + 站内转化；默认关闭付费广告"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.conversion",
+      "fmt": "esc",
+      "raw": "定价页 + 示例 PDF + Stripe Checkout",
+      "rendered": "定价页 + 示例 PDF + Stripe Checkout"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.delivery",
+      "fmt": "esc",
+      "raw": "引导式表单 → PDF/ZIP 生成 → 邮件送达",
+      "rendered": "引导式表单 → PDF/ZIP 生成 → 邮件送达"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.support",
+      "fmt": "esc",
+      "raw": "AI FAQ + 工单自动回复模板；升级路径指向律师名录外链",
+      "rendered": "AI FAQ + 工单自动回复模板；升级路径指向律师名录外链"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.billing",
+      "fmt": "esc",
+      "raw": "Stripe 一次性 / 可选年订",
+      "rendered": "Stripe 一次性 / 可选年订"
+    },
+    {
+      "path": "bp_plan.zero_human_stack.risk",
+      "fmt": "esc",
+      "raw": "速率限制、重复支付检测、恶意上传扫描、PDPA 最小化存储",
+      "rendered": "速率限制、重复支付检测、恶意上传扫描、PDPA 最小化存储"
+    },
+    {
+      "path": "unit_economics.disclaimer_zh",
+      "fmt": "esc",
+      "raw": "访客量与转化率为待测量三角分布中枢的确定性切片，不是承诺；结论以蒙特卡洛分布为准。",
+      "rendered": "访客量与转化率为待测量三角分布中枢的确定性切片，不是承诺；结论以蒙特卡洛分布为准。"
+    },
+    {
+      "path": "unit_economics.headline.base_orders_year",
+      "fmt": "num1",
+      "raw": 47.519999999999996,
+      "rendered": "47.5"
+    },
+    {
+      "path": "unit_economics.headline.base_contribution_margin",
+      "fmt": "pct",
+      "raw": 0.9470454018374811,
+      "rendered": "94.7%"
+    },
+    {
+      "path": "unit_economics.headline.base_penetration",
+      "fmt": "pct2",
+      "raw": 0.006607341490545049,
+      "rendered": "0.66%"
+    },
+    {
+      "path": "unit_economics.spf_fatal_injury_accidents_2024",
+      "fmt": "int",
+      "raw": 7192,
+      "rendered": "7,192"
+    },
+    {
+      "path": "unit_economics.headline.base_annual_profit_usd",
+      "fmt": "usd",
+      "raw": 1398.5130608639997,
+      "rendered": "$1,399"
+    },
+    {
+      "path": "unit_economics.headline.capacity_orders_month",
+      "fmt": "num1",
+      "raw": 233.33333333333334,
+      "rendered": "233.3"
+    },
+    {
+      "path": "bp_plan.goodwill.value_first",
+      "fmt": "esc",
+      "raw": "先帮用户把材料整理清楚，减少慌乱与遗漏；再谈收费。",
+      "rendered": "先帮用户把材料整理清楚，减少慌乱与遗漏；再谈收费。"
+    },
+    {
+      "path": "bp_plan.goodwill.honesty",
+      "fmt": "esc",
+      "raw": "不确定的转化与 CAC 标明待测量；不承诺赔付结果。",
+      "rendered": "不确定的转化与 CAC 标明待测量；不承诺赔付结果。"
+    },
+    {
+      "path": "unit_economics.constraints.risk_capital_usd",
+      "fmt": "usd",
+      "raw": 2000.0,
+      "rendered": "$2,000"
+    },
+    {
+      "path": "risk_metrics.primary.shadow_hourly_usd",
+      "fmt": "usd2",
+      "raw": 25.0,
+      "rendered": "$25.00"
+    },
+    {
+      "path": "risk_metrics.primary.aggregate_moic",
+      "fmt": "mult",
+      "raw": 0.5868187148415411,
+      "rendered": "0.59x"
+    },
+    {
+      "path": "risk_metrics.primary.risk_adj_annualised_ev_zero",
+      "fmt": "pct",
+      "raw": -0.38446997678693895,
+      "rendered": "-38.4%"
+    },
+    {
+      "path": "risk_metrics.primary.risk_adj_annualised_ev_breakeven",
+      "fmt": "pct",
+      "raw": 0.0029442253066316315,
+      "rendered": "0.3%"
+    },
+    {
+      "path": "risk_metrics.breakeven_shadow_hourly_usd",
+      "fmt": "usd2",
+      "raw": 14.431365387860396,
+      "rendered": "$14.43"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.disclaimer_zh",
+      "fmt": "esc",
+      "raw": "理论 Kelly 回答的是『若这是可重复边缘赌注且 p、b 已知，应占资金池多大』；不等于建议把 100 万立刻投入本项目。精益执行仍受 US$2,000 运营风险资本约束。p 为估计值，须连同敏感性网格阅读。",
+      "rendered": "理论 Kelly 回答的是『若这是可重复边缘赌注且 p、b 已知，应占资金池多大』；不等于建议把 100 万立刻投入本项目。精益执行仍受 US$2,000 运营风险资本约束。p 为估计值，须连同敏感性网格阅读。"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.f_star_numeric",
+      "fmt": "pct",
+      "raw": 0.0,
+      "rendered": "0.0%"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.full_kelly_cny",
+      "fmt": "num0",
+      "raw": 0.0,
+      "rendered": "0"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.half_kelly_cny",
+      "fmt": "num0",
+      "raw": 0.0,
+      "rendered": "0"
+    },
+    {
+      "path": "risk_metrics.kelly_1m_cny.quarter_kelly_cny",
+      "fmt": "num0",
+      "raw": 0.0,
+      "rendered": "0"
+    },
+    {
+      "path": "risk_metrics.time_kelly.hours_budget_5y",
+      "fmt": "num0",
+      "raw": 5200.0,
+      "rendered": "5,200"
+    },
+    {
+      "path": "risk_metrics.time_kelly.mean_hours_per_attempt",
+      "fmt": "num0",
+      "raw": 3456.102,
+      "rendered": "3,456"
+    },
+    {
+      "path": "risk_metrics.time_kelly.note_zh",
+      "fmt": "esc",
+      "raw": "分阶段：Phase0 仅承诺约 20 小时验证，保留放弃期权。",
+      "rendered": "分阶段：Phase0 仅承诺约 20 小时验证，保留放弃期权。"
+    },
+    {
+      "path": "risk_metrics.decision_zh",
+      "fmt": "esc",
+      "raw": "以主口径影子时薪下的胜率、盈亏比与半 Kelly 为决策参考；若半 Kelly 对应金额仍高于精益风险资本，执行层仍按 US$2,000 封顶分阶段投入。",
+      "rendered": "以主口径影子时薪下的胜率、盈亏比与半 Kelly 为决策参考；若半 Kelly 对应金额仍高于精益风险资本，执行层仍按 US$2,000 封顶分阶段投入。"
+    },
+    {
+      "path": "monte_carlo.seed",
+      "fmt": "int",
+      "raw": 20260802,
+      "rendered": "20,260,802"
+    }
+  ]
+}
